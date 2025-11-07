@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
-
 import "./App.css";
+
+const baseUrl = import.meta.env.VITE_API_BASE;
+
+if (!baseUrl) {
+  throw new Error("VITE_API_BASE is not defined");
+}
 
 function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/message")
+    fetch(`${baseUrl}/api/message`)
       .then((response) => response.json())
       .then((data) => setMessage(data.message))
       .catch((error) => {

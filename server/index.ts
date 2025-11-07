@@ -10,6 +10,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "http://localhost:3000",
+      "34.93.175.115",
     ],
     credentials: true,
     methods: ["GET", "POST"],

@@ -19,6 +19,8 @@ services:
     depends_on:
       - server
     restart: unless-stopped
+    environment:
+      - VITE_API_BASE= http://34.93.175.115:4000
 
 networks:
   fullstack-net:
