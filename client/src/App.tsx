@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const baseUrl = import.meta.env.VITE_API_BASE;
+const baseUrl = import.meta.env.VITE_API_BASE || "http://localhost:4000";
 
 if (!baseUrl) {
   throw new Error("VITE_API_BASE is not defined");
